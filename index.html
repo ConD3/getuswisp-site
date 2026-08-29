@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get US WISP | Written Information Security Plans for Tax and Accounting Firms</title>
+<meta name="description" content="FTC Safeguards Rule and IRS Publication 4557 compliance for CPA and tax firms. Free email security assessment, no credentials required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@400;600&display=swap">
+<style>
+  :root{
+    --ground:#FFFFFF; --alt:#F4F5F7; --deep:#132F4F;
+    --ink:#14181F; --ink-2:#4A5462;
+    --ink-3:#798495; --rule:#DCE0E6;
+    --navy:#1D3D63; --copper:#8C5416; --teal:#14655E;
+    --f-d:"Spectral",Georgia,"Times New Roman",serif;
+    --f-b:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-b);
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:720px}
+
+  /* ---------- barra ---------- */
+  header.bar{border-bottom:1px solid var(--rule);background:var(--ground);
+    position:sticky;top:0;z-index:10}
+  .bar-in{display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:16px 0;flex-wrap:wrap}
+  .logo{font-family:var(--f-d);font-size:21px;font-weight:600;color:var(--navy);
+    letter-spacing:-.01em;text-decoration:none}
+  .bar-r{display:flex;align-items:center;gap:22px;font-size:15px}
+  .bar-r a{color:var(--ink-2);text-decoration:none}
+  .bar-r a:hover{color:var(--navy)}
+  .bar-r .tel{font-weight:600;color:var(--ink)}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--deep);color:#fff;padding:76px 0 68px}
+  .hero h1{font-family:var(--f-d);font-weight:600;
+    font-size:clamp(31px,4.6vw,50px);line-height:1.12;letter-spacing:-.015em;
+    margin:0 0 20px;text-wrap:balance;max-width:19ch}
+  .hero p.lede{font-size:19px;line-height:1.6;color:#C7D3E2;margin:0 0 32px;
+    max-width:58ch}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{display:inline-block;padding:14px 26px;border-radius:3px;
+    font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid transparent}
+  .btn-p{background:#C98A3C;color:#1A1206;border-color:#C98A3C}
+  .btn-p:hover{background:#DA9C4E;border-color:#DA9C4E}
+  .btn-s{border-color:#5B769A;color:#fff}
+  .btn-s:hover{border-color:#8FA6C2;background:rgba(255,255,255,.06)}
+  .hero small{display:block;margin-top:20px;color:#8FA1B8;font-size:14.5px}
+
+  /* ---------- secciones ---------- */
+  section{padding:66px 0}
+  section.alt{background:var(--alt);border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule)}
+  h2{font-family:var(--f-d);font-weight:600;font-size:clamp(25px,3.2vw,34px);
+    line-height:1.2;letter-spacing:-.012em;margin:0 0 18px;text-wrap:balance}
+  h3{font-size:17.5px;font-weight:600;margin:0 0 8px;color:var(--ink)}
+  p{margin:0 0 17px;color:var(--ink-2)}
+  p:last-child{margin-bottom:0}
+  p.big{font-size:18.5px;color:var(--ink)}
+  strong{color:var(--ink);font-weight:600}
+  .eyebrow{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--copper);font-weight:600;margin:0 0 12px}
+
+  /* ---------- tarjetas ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;margin-top:34px}
+  .card{background:var(--ground);border:1px solid var(--rule);border-radius:3px;
+    padding:24px;border-top:3px solid var(--navy)}
+  section.alt .card{background:#fff}
+  .card p{font-size:15.5px;margin:0}
+
+  /* ---------- destacado ---------- */
+  .quote{border-left:3px solid var(--copper);background:#F3E7D6;
+    padding:26px 28px;border-radius:0 3px 3px 0;margin:0 0 26px}
+  .quote p.q{font-family:var(--f-d);font-size:22px;line-height:1.4;
+    color:var(--copper);margin:0;font-weight:600}
+
+  ul.check{list-style:none;padding:0;margin:26px 0 0}
+  ul.check li{position:relative;padding-left:30px;margin-bottom:14px;
+    color:var(--ink-2);font-size:16.5px}
+  ul.check li:last-child{margin-bottom:0}
+  ul.check li::before{content:"";position:absolute;left:6px;top:11px;
+    width:8px;height:8px;background:var(--teal);border-radius:50%}
+  ul.check li b{color:var(--ink)}
+
+  /* ---------- oferta ---------- */
+  .offer{background:var(--deep);color:#fff;border-radius:4px;padding:40px 38px}
+  .offer h2{color:#fff;margin-bottom:14px}
+  .offer p{color:#C7D3E2}
+  .offer strong{color:#fff}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:22px;margin:30px 0 32px}
+  .step .n{font-family:var(--f-d);font-size:28px;color:#C98A3C;font-weight:600;
+    line-height:1;margin-bottom:8px}
+  .step p{font-size:15.5px;margin:0}
+
+  /* ---------- bio ---------- */
+  .bio{display:grid;grid-template-columns:1fr;gap:26px}
+  @media(min-width:760px){.bio{grid-template-columns:1.4fr 1fr}}
+  .bio-card{background:var(--alt);border:1px solid var(--rule);
+    border-radius:3px;padding:24px;align-self:start}
+  .bio-card p{font-size:15px;margin-bottom:10px}
+  .bio-card .lbl{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:600;margin-bottom:4px}
+
+  /* ---------- pie ---------- */
+  footer{background:var(--ink);color:#98A2B0;padding:44px 0;font-size:14.5px}
+  footer a{color:#C7D3E2;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .foot-in{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+  footer .legal{max-width:52ch;font-size:13px;color:#78828F;margin-top:22px;
+    padding-top:20px;border-top:1px solid #2A3038}
+
+  a:focus-visible,.btn:focus-visible{outline:2px solid #C98A3C;outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="logo" href="#top">Get US WISP</a>
+    <div class="bar-r">
+      <a href="#what">What is a WISP</a>
+      <a href="#assessment">Free assessment</a>
+      <a class="tel" href="tel:+13057264103">(305) 726-4103</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <h1>Your firm is required to have a written security plan.</h1>
+    <p class="lede">If you prepare tax returns, the FTC Safeguards Rule applies to your firm the same way it applies to a bank, and the IRS asks you to attest to it every time you renew your PTIN. Most firms don't have the plan. We write it, from your real environment, in about a week.</p>
+    <div class="cta-row">
+      <a class="btn btn-p" href="#assessment">Get a free assessment</a>
+      <a class="btn btn-s" href="#what">What is a WISP?</a>
+    </div>
+    <small>Serving CPA, tax and accounting firms in South Florida.</small>
+  </div>
+</div>
+
+<section id="what">
+  <div class="wrap narrow">
+    <p class="eyebrow">The requirement</p>
+    <h2>What a WISP is, in one paragraph</h2>
+    <p class="big">A <strong>Written Information Security Plan</strong> is a document that states how your firm protects taxpayer data. It names the person accountable, records the risks you identified, describes the safeguards you chose in response, and is reviewed at least once a year.</p>
+    <p>It is a document, not software. No product exists that <em>is</em> your WISP.</p>
+    <p>The obligation comes from the Gramm-Leach-Bliley Act, which treats a firm that prepares returns as a financial institution. That puts you under the FTC Safeguards Rule, 16 CFR Part 314. IRS Publication 4557 covers the same ground for tax professionals specifically.</p>
+    <p>You have probably already attested to this. <strong>Form W-12, the PTIN renewal, asks you to confirm your data security responsibilities</strong>, and that confirmation is made under penalty of perjury. The exposure is not only that a plan may be missing. Its absence sits behind a signature you already gave.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <p class="eyebrow">The common misconception</p>
+    <h2>Your IT provider cannot do this for you</h2>
+    <div class="quote">
+      <p class="q">"Our IT company handles that."</p>
+    </div>
+    <p>This is the answer most firms give, and it is half true in a way that leaves them exposed.</p>
+    <p>Your IT provider can absolutely <strong>implement</strong> controls: turn on multi-factor authentication, encrypt laptops, configure backups. Good ones do this well.</p>
+    <p>What your IT provider <strong>cannot</strong> do is serve as your Qualified Individual, author your firm's risk assessment, decide which risks your firm accepts, or sign the annual report to your own partners. Those obligations belong to the firm, and the name on them is a partner's, not a vendor's.</p>
+    <p>It is also why forwarding this to IT usually ends with nothing happening. It is not their document to write, and most IT providers do not offer compliance documentation at all. Meanwhile the obligation, and the signature, stay with you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="narrow">
+      <p class="eyebrow">The engagement</p>
+      <h2>What you end up holding</h2>
+      <p>Documents your firm adopts as its own, built from what is actually running in your environment, not a template with your name typed into it.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Your WISP</h3>
+        <p>The written plan itself, covering every element the Safeguards Rule requires, populated with your real systems and your named Qualified Individual.</p>
+      </div>
+      <div class="card">
+        <h3>Risk assessment</h3>
+        <p>A documented assessment of foreseeable risks to client data and the safeguards chosen in response, dated and current within twelve months.</p>
+      </div>
+      <div class="card">
+        <h3>Incident response plan</h3>
+        <p>Roles, escalation, and the notification contacts you would need on the worst day, decided in advance rather than during.</p>
+      </div>
+      <div class="card">
+        <h3>Evidence packet</h3>
+        <p>The artifacts behind each control, timestamped and retrievable, so when your insurance carrier asks, the answer takes minutes instead of weeks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="assessment">
+  <div class="wrap">
+    <div class="offer">
+      <p class="eyebrow" style="color:#C98A3C">No cost, no obligation</p>
+      <h2>Start with a free email security assessment</h2>
+      <p>One of the twenty-three controls your firm must document can be checked from outside, using only your domain's public DNS records. That is the same information every mail server on the internet reads before accepting a message from you.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <p>You send your firm's domain name. Nothing else.</p>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <p>No credentials, no access, nothing installed. Your systems are never touched.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <p>You get a written report with the findings, what each one means, and the citation behind it.</p>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-p" href="mailto:conde@getuswisp.com?subject=Free%20assessment%20request&amp;body=Firm%20name%3A%0D%0ADomain%3A%0D%0ABest%20number%20to%20reach%20you%3A%0D%0A">Request your assessment</a>
+        <a class="btn btn-s" href="tel:+13057264103">Or call (305) 726-4103</a>
+      </div>
+      <p style="margin-top:24px;font-size:15px">Whether or not anything comes of it, you keep the report.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="bio">
+      <div>
+        <p class="eyebrow">Who you would be working with</p>
+        <h2>Roberto Conde</h2>
+        <p>I am a systems engineer who has spent years administering Microsoft 365, Entra ID, Intune, SQL Server and enterprise networks for financial services companies and accounting firms in Miami. Those are the same environments this work is about.</p>
+        <p>That background is the reason this is not a template exercise. When a report says your device encryption cannot be verified, it is because I looked at how your environment is actually configured and know what evidence an auditor will accept for it.</p>
+        <p>You work directly with me. There is no account manager and no handoff.</p>
+      </div>
+      <div class="bio-card">
+        <p class="lbl">Contact</p>
+        <p><a href="mailto:conde@getuswisp.com" style="color:var(--navy);text-decoration:none">conde@getuswisp.com</a><br>
+        <a href="tel:+13057264103" style="color:var(--navy);text-decoration:none">(305) 726-4103</a></p>
+        <p class="lbl" style="margin-top:18px">Serving</p>
+        <p>CPA, tax and accounting firms across South Florida.</p>
+        <p class="lbl" style="margin-top:18px">Entity</p>
+        <p>Montecristi Group LLC, Florida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div style="font-family:var(--f-d);font-size:20px;color:#fff;margin-bottom:6px">Get US WISP</div>
+        <div>A service of Montecristi Group LLC</div>
+      </div>
+      <div>
+        <a href="mailto:conde@getuswisp.com">conde@getuswisp.com</a><br>
+        <a href="tel:+13057264103">(305) 726-4103</a>
+      </div>
+    </div>
+    <p class="legal">Get US WISP provides security assessment and compliance documentation services. We report conditions observed on the date of assessment; we do not certify compliance, and nothing on this site is legal advice. References to 16 CFR Part 314 and IRS Publication 4557 are provided for context. Verify current requirements with your own counsel.</p>
+  </div>
+</footer>
+
+</body>
+</html>
