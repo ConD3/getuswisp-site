@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Get US WISP | Written Information Security Plans for Tax and Accounting Firms</title>
 <meta name="description" content="FTC Safeguards Rule and IRS Publication 4557 compliance for CPA and tax firms. Free email security assessment, no credentials required.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<meta name="theme-color" content="#132F4F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Spectral:wght@400;600&display=swap">
@@ -31,8 +35,9 @@
     position:sticky;top:0;z-index:10}
   .bar-in{display:flex;align-items:center;justify-content:space-between;
     gap:16px;padding:16px 0;flex-wrap:wrap}
-  .logo{font-family:var(--f-d);font-size:21px;font-weight:600;color:var(--navy);
-    letter-spacing:-.01em;text-decoration:none}
+  .logo{display:flex;align-items:center;text-decoration:none}
+  .logo img{display:block;height:40px;width:auto}
+  @media(max-width:520px){.logo img{height:33px}}
   .bar-r{display:flex;align-items:center;gap:22px;font-size:15px}
   .bar-r a{color:var(--ink-2);text-decoration:none}
   .bar-r a:hover{color:var(--navy)}
@@ -127,7 +132,7 @@
 
 <header class="bar">
   <div class="wrap bar-in">
-    <a class="logo" href="#top">Get US WISP</a>
+    <a class="logo" href="#top" aria-label="Get US WISP"><img src="assets/logo-sin-bajada.svg" alt="Get US WISP" width="212" height="44"></a>
     <div class="bar-r">
       <a href="#what">What is a WISP</a>
       <a href="#assessment">Free assessment</a>
