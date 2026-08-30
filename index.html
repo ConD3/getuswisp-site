@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Get US WISP | Written Information Security Plans for Tax and Accounting Firms</title>
 <meta name="description" content="FTC Safeguards Rule and IRS Publication 4557 compliance for CPA and tax firms. Free email security assessment, no credentials required.">
+<link rel="canonical" href="https://getuswisp.com/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Get US WISP">
+<meta property="og:url" content="https://getuswisp.com/">
+<meta property="og:title" content="Your firm is required to have a written security plan.">
+<meta property="og:description" content="FTC Safeguards Rule and IRS Publication 4557 compliance for CPA and tax firms in South Florida. Free email security assessment, no credentials required.">
+<meta property="og:image" content="https://getuswisp.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Get US WISP. Your firm is required to have a written security plan.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your firm is required to have a written security plan.">
+<meta name="twitter:description" content="FTC Safeguards Rule compliance for CPA and tax firms. Free email security assessment.">
+<meta name="twitter:image" content="https://getuswisp.com/assets/og-image.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
@@ -126,6 +141,29 @@
     padding-top:20px;border-top:1px solid #2A3038}
 
   a:focus-visible,.btn:focus-visible{outline:2px solid #C98A3C;outline-offset:3px}
+  /* ---------- formulario ---------- */
+  .form{background:#fff;border:1px solid var(--rule);border-radius:4px;
+    padding:26px;margin-top:28px;max-width:560px}
+  .form .row{display:flex;gap:14px;flex-wrap:wrap}
+  .form .row .fld{flex:1 1 210px}
+  .fld{margin-bottom:15px}
+  .fld label{display:block;font-size:13.5px;font-weight:600;color:var(--ink-2);
+    margin-bottom:5px}
+  .fld input{width:100%;font:inherit;font-size:16px;padding:10px 12px;
+    border:1px solid #C4CBD4;border-radius:3px;background:#fff;color:var(--ink)}
+  .fld input:focus{outline:2px solid var(--navy);outline-offset:-1px;border-color:var(--navy)}
+  .fld .hint{font-size:13px;color:var(--ink-3);margin-top:4px}
+  .form button{font:inherit;font-weight:600;font-size:16px;cursor:pointer;
+    padding:14px 26px;border-radius:3px;border:1.5px solid #C98A3C;
+    background:#C98A3C;color:#1A1206;width:100%}
+  .form button:hover{background:#DA9C4E;border-color:#DA9C4E}
+  .form button[disabled]{opacity:.6;cursor:default}
+  .form .note{font-size:13.5px;color:var(--ink-3);margin-top:12px;line-height:1.5}
+  .form .note a{color:var(--navy)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .msg{margin-top:14px;padding:13px 15px;border-radius:3px;font-size:15px;display:none}
+  .msg.ok{display:block;background:#DCEDEA;border-left:3px solid #14655E;color:#0F4B45}
+  .msg.err{display:block;background:#F3DDDD;border-left:3px solid #8C2F2F;color:#6E2424}
 </style>
 </head>
 <body>
@@ -254,9 +292,44 @@
           <p>You get a written report with the findings, what each one means, and the citation behind it.</p>
         </div>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-p" href="mailto:conde@getuswisp.com?subject=Free%20assessment%20request&amp;body=Firm%20name%3A%0D%0ADomain%3A%0D%0ABest%20number%20to%20reach%20you%3A%0D%0A">Request your assessment</a>
+      <form class="form" id="assess-form" novalidate>
+        <div class="row">
+          <div class="fld">
+            <label for="f-firm">Firm name</label>
+            <input id="f-firm" name="firm" type="text" autocomplete="organization" required>
+          </div>
+          <div class="fld">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f-domain">Your firm's domain</label>
+          <input id="f-domain" name="domain" type="text" placeholder="yourfirm.com" required>
+          <p class="hint">Just the domain. Nothing else is needed to run the assessment.</p>
+        </div>
+        <div class="row">
+          <div class="fld">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="fld">
+            <label for="f-phone">Phone <span style="font-weight:400;color:var(--ink-3)">(optional)</span></label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">Leave this empty</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" id="f-send">Request your assessment</button>
+        <div class="msg" id="f-msg" role="status" aria-live="polite"></div>
+        <p class="note">We read only your public DNS records. No credentials, no access,
+          nothing installed. See our <a href="legal.html#privacy">privacy policy</a>.</p>
+      </form>
+      <div class="cta-row" style="margin-top:22px">
         <a class="btn btn-s" href="tel:+13057264103">Or call (305) 726-4103</a>
+        <a class="btn btn-s" href="assets/what-is-a-wisp.pdf" download>Download: what a WISP is (PDF)</a>
       </div>
       <p style="margin-top:24px;font-size:15px">Whether or not anything comes of it, you keep the report.</p>
     </div>
@@ -291,17 +364,73 @@
   <div class="wrap">
     <div class="foot-in">
       <div>
-        <div style="font-family:var(--f-d);font-size:20px;color:#fff;margin-bottom:6px">Get US WISP</div>
+        <img src="assets/logo-blanco.svg" alt="Get US WISP" width="196" height="41" style="height:34px;width:auto;display:block;margin-bottom:8px">
         <div>A service of Montecristi Group LLC</div>
       </div>
       <div>
         <a href="mailto:conde@getuswisp.com">conde@getuswisp.com</a><br>
         <a href="tel:+13057264103">(305) 726-4103</a>
       </div>
+      <div>
+        <a href="legal.html#privacy">Privacy</a> &nbsp;·&nbsp;
+        <a href="legal.html#terms">Terms</a>
+      </div>
     </div>
     <p class="legal">Get US WISP provides security assessment and compliance documentation services. We report conditions observed on the date of assessment; we do not certify compliance, and nothing on this site is legal advice. References to 16 CFR Part 314 and IRS Publication 4557 are provided for context. Verify current requirements with your own counsel.</p>
   </div>
 </footer>
 
+
+<script>
+(function(){
+  // Pega aqui el endpoint de Formspree cuando lo tengas
+  // (https://formspree.io/f/xxxxxxxx). Mientras este vacio, el formulario
+  // arma un correo con los mismos datos y abre el cliente del visitante, asi
+  // que el boton sirve desde hoy y no hay un estado roto en el medio.
+  var ENDPOINT = "";
+
+  var f = document.getElementById('assess-form');
+  if(!f) return;
+  var msg = document.getElementById('f-msg'), btn = document.getElementById('f-send');
+
+  function say(texto, clase){ msg.textContent = texto; msg.className = 'msg ' + clase; }
+
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(f.website.value) return;                 // trampa para bots
+    var d = {
+      firm: f.firm.value.trim(), name: f.name.value.trim(),
+      domain: f.domain.value.trim().replace(/^https?:\/\//,'').split('/')[0],
+      email: f.email.value.trim(), phone: f.phone.value.trim()
+    };
+    if(!d.firm || !d.name || !d.domain || !d.email){
+      say('Please fill in the firm, your name, the domain and your email.','err'); return;
+    }
+    if(!ENDPOINT){
+      var cuerpo = 'Firm name: '+d.firm+'\r\nYour name: '+d.name+'\r\nDomain: '+d.domain
+                 + '\r\nEmail: '+d.email+'\r\nPhone: '+(d.phone||'-')+'\r\n';
+      window.location.href = 'mailto:conde@getuswisp.com?subject='
+        + encodeURIComponent('Free assessment request: '+d.domain)
+        + '&body=' + encodeURIComponent(cuerpo);
+      say('Opening your email app with the details filled in. If nothing happens, '
+        + 'write to conde@getuswisp.com or call (305) 726-4103.','ok');
+      return;
+    }
+    btn.disabled = true; btn.textContent = 'Sending...';
+    fetch(ENDPOINT, {
+      method:'POST', headers:{'Accept':'application/json','Content-Type':'application/json'},
+      body: JSON.stringify(d)
+    }).then(function(r){
+      if(!r.ok) throw new Error(r.status);
+      f.reset(); btn.textContent = 'Request your assessment';
+      say('Got it. You will hear from Roberto within one business day.','ok');
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = 'Request your assessment';
+      say('Something went wrong sending that. Please email conde@getuswisp.com '
+        + 'or call (305) 726-4103.','err');
+    });
+  });
+})();
+</script>
 </body>
 </html>
