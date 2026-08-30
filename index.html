@@ -391,11 +391,11 @@
 
 <script>
 (function(){
-  // Pega aqui el endpoint de Formspree cuando lo tengas
-  // (https://formspree.io/f/xxxxxxxx). Mientras este vacio, el formulario
-  // arma un correo con los mismos datos y abre el cliente del visitante, asi
-  // que el boton sirve desde hoy y no hay un estado roto en el medio.
-  var ENDPOINT = "";
+  // Endpoint de Formspree. Si algun dia se cae o se cancela la cuenta, deja
+  // esta cadena vacia y el formulario vuelve solo al modo mailto: arma el
+  // correo con los mismos datos y abre el cliente del visitante. Nunca queda
+  // un boton que no hace nada.
+  var ENDPOINT = "https://formspree.io/f/myeyzodr";
 
   var f = document.getElementById('assess-form');
   if(!f) return;
